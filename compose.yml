@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  evennia:
+    build: .
+    image: dscanlen/ashkar
+    stdin_open: true
+    tty: true
+    ports:
+      - "4001-4002:4001-4002"
+      - "4000:4000"
+    volumes: 
+      - .:/usr/src/game
